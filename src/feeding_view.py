@@ -1,9 +1,7 @@
 from flask import Blueprint, request, jsonify
-from animal_view import animals
+from repository import animals, feedings
 
 feeding_blueprint = Blueprint("feeding", __name__)
-
-feedings = {}
 
 
 @feeding_blueprint.route("/feedings", methods=["GET"])
@@ -158,7 +156,7 @@ def update_animal(feeding_id):
             400,
         )
 
-    if not animals.get(request.json["animal_id"]):
+    if "animal_id" in request.json and not animals.get(request.json["animal_id"]):
         return (
             jsonify(
                 {

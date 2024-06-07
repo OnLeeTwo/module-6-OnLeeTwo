@@ -13,13 +13,6 @@ app.register_blueprint(feeding_blueprint)
 app.register_blueprint(report_blueprint)
 swagger = Swagger(app)
 
-animals = {}
-employees = {}
-feedings = {}
-visitor_reports = []
-revenue_reports = []
-animals_reports = []
-
 
 @app.errorhandler(404)
 def page_not_found(e):

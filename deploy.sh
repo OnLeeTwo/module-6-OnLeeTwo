@@ -1,3 +1,5 @@
-docker build -t 'docker-intro' -f 'Dockerfile' .
+#!/bin/bash
 
-docker run -p 5001:5001 'docker-intro'
+docker build -t 'docker-test' -f 'Dockerfile.local' .
+
+docker run -p 5001:5001 'docker-test'

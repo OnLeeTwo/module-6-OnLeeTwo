@@ -1,8 +1,7 @@
 from flask import Blueprint, request, jsonify
+from repository import animals
 
 animal_blueprint = Blueprint("animal", __name__)
-
-animals = {}
 
 
 @animal_blueprint.route("/animal", methods=["GET"])

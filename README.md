@@ -2,7 +2,7 @@
 
 # Zoo Management API in Python
 
-[Link to the website](https://pokemon-viewer-next-js.vercel.app/)
+[Link to the API](https://zoo-management-uzk7a2g7wa-et.a.run.app/)
 
 This is an API that created using Flask in Python to simulate a zoo operation. Created by Owent Ovandy, 7 June 2024
 
