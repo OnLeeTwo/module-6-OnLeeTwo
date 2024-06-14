@@ -1,0 +1,24 @@
+Create a new enclosure
+---
+tags:
+  - Enclosure
+parameters:
+  - name: enclosure
+    in: body
+    schema:
+      id: enclosure
+      required:
+        - name
+        - type
+      properties:
+        name:
+          type: string
+          description: The name of the enclosure to be added
+        type:
+          type: string
+          description: The species of the enclosure to be added
+responses:
+  201:
+    description: enclosure created
+  400:
+    descrpition: No data provided or missing fields

@@ -1,0 +1,27 @@
+Update employee in database
+---
+tags:
+  - Employee
+parameters:
+  - name: employee
+    in: body
+    schema:
+      id: Employee
+      properties:
+        name:
+          type: string
+          description: The name of the employee to be added
+        email:
+          type: string
+          description: The email of the employee to be added
+        phone:
+          type: string
+          description: The phone of the employee to be added
+        role:
+          type: number
+          description: The role of the employee to be added
+responses:
+  201:
+    description: employee updated
+  400:
+    descrpition: No data provided

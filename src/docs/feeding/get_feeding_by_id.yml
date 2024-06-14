@@ -1,0 +1,9 @@
+Get feeding schedule list by Id
+---
+tags:
+  - Feeding
+responses:
+  200:
+    description: Return an feeding schedule with provided ID
+  404:
+    description: Return animal id not found

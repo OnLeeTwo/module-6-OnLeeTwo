@@ -1,0 +1,23 @@
+Update enclosure in database
+---
+tags:
+  - Enclosure
+parameters:
+  - name: enclosure
+    in: body
+    schema:
+      id: enclosure
+      properties:
+        name:
+          type: string
+          description: The name of the enclosure to be added
+        type:
+          type: string
+          description: The species of the enclosure to be added
+responses:
+  201:
+    description: Enclosure updated
+  400:
+    descrpition: No data provided
+  404:
+    description: Enclosure ID not found

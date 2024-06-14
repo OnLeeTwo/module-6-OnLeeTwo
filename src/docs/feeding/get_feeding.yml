@@ -1,0 +1,7 @@
+Get feeding schedule list
+---
+tags:
+  - Feeding
+responses:
+  200:
+    description: Return a list of feedings schedule

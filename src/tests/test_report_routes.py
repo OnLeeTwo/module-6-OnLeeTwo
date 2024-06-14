@@ -1,7 +1,8 @@
-animals = {}
-employees = {}
-feedings = {}
-visitors_reports = [
+import pytest
+from app import app
+from unittest.mock import patch
+
+mock_visitors_reports = [
     {
         "ticket_type": "Adult",
         "date": "2024-06-01",
@@ -28,7 +29,7 @@ visitors_reports = [
     },
 ]
 
-revenue_reports = [
+mock_revenue_reports = [
     {
         "ticket_type": "Adult",
         "event_type": "General Admission",
@@ -49,7 +50,7 @@ revenue_reports = [
     },
 ]
 
-animals_reports = [
+mock_animals_reports = [
     {
         "species": "Panthera leo",
         "gender_distribution": {"Male": 2, "Female": 1},
@@ -66,3 +67,30 @@ animals_reports = [
         "enclosure_distribution": {"Arctic": 1},
     },
 ]
+
+
+@pytest.fixture
+def client():
+    with app.test_client() as client:
+        yield client
+
+
+@patch("routes.report.animals", mock_animals_reports)
+def test_get_animal_report(client):
+    response = client.get("reports/animals")
+    assert response.status_code == 200
+    assert response.json == mock_animals_reports
+
+
+@patch("routes.report.visitors_reports", mock_visitors_reports)
+def test_get_visitor_report(client):
+    response = client.get("reports/visitors")
+    assert response.status_code == 200
+    assert response.json == mock_visitors_reports
+
+
+@patch("routes.report.revenue_reports", mock_revenue_reports)
+def test_get_animal_report(client):
+    response = client.get("reports/revenue")
+    assert response.status_code == 200
+    assert response.json == mock_revenue_reports

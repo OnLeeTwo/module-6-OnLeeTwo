@@ -1,0 +1,15 @@
+Delete an feeding schedule by ID.
+---
+tags:
+  - Feeding
+parameters:
+  - name: feeding_id
+    in: path
+    type: string
+    required: true
+    description: ID of the feeding schedule to delete
+responses:
+  200:
+    description: Feeding schedule deleted successfully
+  404:
+    description: Feeding schedule not found

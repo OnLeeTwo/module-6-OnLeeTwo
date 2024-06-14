@@ -1,0 +1,7 @@
+Get reveune reports
+---
+tags:
+  - Report
+responses:
+  200:
+    description: Return a list of revenue reports

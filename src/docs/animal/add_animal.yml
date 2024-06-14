@@ -1,0 +1,40 @@
+Create a new animal
+---
+tags:
+  - Animal
+parameters:
+  - name: animal
+    in: body
+    schema:
+      id: Animal
+      required:
+        - enclosure_id
+        - name
+        - species
+        - familia
+        - age
+        - gender
+      properties:
+        enclosure_id:
+          type: string
+          description: The ID of the enclosure to animal habits
+        name:
+          type: string
+          description: The name of the animal to be added
+        species:
+          type: string
+          description: The species of the animal to be added
+        familia:
+          type: string
+          description: The familia of the animal to be added
+        age:
+          type: number
+          description: The age of the animal to be added
+        gender:
+          type: string
+          description: The gender of the animal to be added
+responses:
+  201:
+    description: Animal created
+  400:
+    descrpition: No data provided or missing fields

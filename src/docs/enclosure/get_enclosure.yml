@@ -1,0 +1,7 @@
+Get enclosure list
+---
+tags:
+  - Enclosure
+responses:
+  200:
+    description: Return a list of enclosure

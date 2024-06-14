@@ -1,0 +1,7 @@
+Get employee list
+---
+tags:
+  - Employee
+responses:
+  200:
+    description: Return a list of employee

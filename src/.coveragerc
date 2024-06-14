@@ -1,0 +1,9 @@
+[run]
+branch = True
+source = services, repository, routes
+
+[report]
+omit =
+    */tests/*
+    */__init__.py
+

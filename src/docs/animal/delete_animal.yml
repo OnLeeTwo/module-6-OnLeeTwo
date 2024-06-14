@@ -1,0 +1,15 @@
+Delete an animal by ID.
+---
+tags:
+  - Animal
+parameters:
+  - name: animal_id
+    in: path
+    type: string
+    required: true
+    description: ID of the animal to delete
+responses:
+  200:
+    description: Animal deleted successfully
+  404:
+    description: Animal not found

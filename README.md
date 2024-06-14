@@ -4,7 +4,7 @@
 
 [Link to the API](https://zoo-management-uzk7a2g7wa-et.a.run.app/)
 
-This is an API that created using Flask in Python to simulate a zoo operation. Created by Owent Ovandy, 7 June 2024
+This is an API that created using Flask in Python to simulate a zoo operation. Created by Owent Ovandy, 14 June 2024
 
 ## Application Details
 
@@ -12,18 +12,24 @@ This is an API that created using Flask in Python to simulate a zoo operation. C
 
 - Flask
 - Flassger
+- NanoID
+- Pytest
+- Coverage
 - Gunicorn
 - Docker
 
 ### Apps Depedency
 
-- flask = "\*"
-- flasgger = "\*"
-- gunicorn = "\*"
+- flask = "*"
+- flasgger = "*"
+- gunicorn = "*"
+- pytest = "*"
+- nanoid = "*"
+- coverage = "*"
 
 ## Function and Description
 
-This API will manage an animal, employees, feeding schedule, and report with adherance to RESTful API. It can do CRUD to animal, employees, and feeding schedules list. For now, it can only read the report data. For full API documentation, check /apidocs on run
+This API will manage an animal, employees, feeding schedule, enclosure, and report with adherance to RESTful API. It can do CRUD to animal, employees, enclosure and feeding schedules list. For now, it can only read the report data. For full API documentation, check /apidocs on run
 
 ## How to run
 
@@ -35,6 +41,5 @@ This API will manage an animal, employees, feeding schedule, and report with adh
 
 ## Future Goals
 
-- Add enclosure function to add an manage animal distribution
 - Add zoo entry function to manage zoo visit
 - Integrate all the function to generate a full working report

@@ -1,17 +1,27 @@
 from flask import Flask, jsonify
-from animal_view import animal_blueprint
-from employee_view import employee_blueprint
-from feeding_view import feeding_blueprint
-from report_view import report_blueprint
+from routes.animal import animal_blueprint
+from routes.employee import employee_blueprint
+from routes.enclosure import enclosure_blueprint
+from routes.feeding import feeding_blueprint
+from routes.report import report_blueprint
 from flasgger import Swagger
 
+template = {
+    "swagger": "2.0",
+    "info": {
+        "title": "Zoo Management",
+        "description": "An API for simulating managing zoo operation",
+        "version": "1.2.0",
+    },
+}
 
 app = Flask(__name__)
 app.register_blueprint(animal_blueprint)
 app.register_blueprint(employee_blueprint)
 app.register_blueprint(feeding_blueprint)
 app.register_blueprint(report_blueprint)
-swagger = Swagger(app)
+app.register_blueprint(enclosure_blueprint)
+swagger = Swagger(app, template=template)
 
 
 @app.errorhandler(404)

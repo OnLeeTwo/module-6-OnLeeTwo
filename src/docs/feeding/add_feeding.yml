@@ -1,0 +1,38 @@
+Create a new feeding schedule
+---
+tags:
+  - Feeding
+parameters:
+  - name: feeding
+    in: body
+    schema:
+      id: Feeding
+      required:
+        - animal_id
+        - employee_id
+        - food_type
+        - date
+        - time
+      properties:
+        animal_id:
+          type: string
+          description: The animal id of the feeding schedule to be added
+        employee_id:
+          type: string
+          description: The employee id of the feeding schedule to be added
+        food_type:
+          type: string
+          description: The food type of the feeding scheduleto be added
+        date:
+          type: number
+          description: The date of the feeding schedule to be added
+        time:
+          type: string
+          description: The time of the feeding schedule to be added
+responses:
+  201:
+    description: Feeding schedule created
+  400:
+    descrpition: No data provided, missing fields
+  404:
+    description: Animal ID or employee Id is not found

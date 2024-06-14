@@ -1,0 +1,7 @@
+Get visitors reports
+---
+tags:
+  - Report
+responses:
+  200:
+    description: Return a list of visitor reports

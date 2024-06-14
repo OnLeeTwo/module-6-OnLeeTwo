@@ -1,0 +1,7 @@
+Get animal list
+---
+tags:
+  - Animal
+responses:
+  200:
+    description: Return a list of animal

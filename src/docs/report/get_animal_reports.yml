@@ -1,0 +1,7 @@
+Get animal reports
+---
+tags:
+  - Report
+responses:
+  200:
+    description: Return a list of animal reports

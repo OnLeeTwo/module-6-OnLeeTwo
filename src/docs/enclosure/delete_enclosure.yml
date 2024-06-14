@@ -1,0 +1,17 @@
+Delete an enclosure by ID.
+---
+tags:
+  - Enclosure
+parameters:
+  - name: enclosure_id
+    in: path
+    type: string
+    required: true
+    description: ID of the enclosure to delete
+responses:
+  200:
+    description: Enclosure deleted successfully
+  400:
+    description: Enclosure not empty
+  404:
+    description: Enclosure not found

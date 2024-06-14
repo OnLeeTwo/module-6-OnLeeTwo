@@ -1,0 +1,17 @@
+Get enclosure by ID
+---
+tags:
+  - Enclosure
+summary: Retrieve an enclosure by its ID
+description: Retrieve detailed information about an enclosure by providing its ID.
+parameters:
+  - name: enclosure_id
+    in: path
+    description: ID of the enclosure to retrieve
+    type: string
+    required: true
+responses:
+  200:
+    description: Return an enclosure with provided ID
+  404:
+    description: Return error if enclosure ID is not found

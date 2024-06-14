@@ -1,0 +1,17 @@
+Get animal by ID
+---
+tags:
+  - Animal
+summary: Retrieve an animal by its ID
+description: Retrieve detailed information about an animal by providing its ID.
+parameters:
+  - name: animal_id
+    in: path
+    description: ID of the animal to retrieve
+    type: string
+    required: true
+responses:
+  200:
+    description: Return an animal with provided ID
+  404:
+    description: Return error if animal ID is not found

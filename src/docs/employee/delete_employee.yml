@@ -1,0 +1,15 @@
+Delete an employee by ID.
+---
+tags:
+  - Employee
+parameters:
+  - name: employee_id
+    in: path
+    type: string
+    required: true
+    description: ID of the employee to delete
+responses:
+  200:
+    description: Employee and the schedules deleted successfully
+  404:
+    description: Employee not found

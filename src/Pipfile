@@ -7,6 +7,9 @@ name = "pypi"
 flask = "*"
 flasgger = "*"
 gunicorn = "*"
+pytest = "*"
+nanoid = "*"
+coverage = "*"
 
 [dev-packages]
 
